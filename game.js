@@ -4,11 +4,13 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 //Game start
-$(document).on("keypress",function(){
+$(".restartbtn").hide();
+$(".startbtn").on("click",function(){
     if(!started){
         $("#level-title").text("Level "+level);
         nextSequence();
         started = true;
+        $(this).hide();
     }
 });
 $(".btn").on("click",function(){
@@ -33,8 +35,14 @@ function checkAnswer(currentLevel){
         setTimeout(function(){
             $("body").removeClass("game-over");
         },200);
-        $("#level-title").text("Game Over, Press Any Key to Restart");
-        startOver();
+        $("#level-title").text("Game Over,Press Restart to Play Again!");
+        $(".restartbtn").show();
+        $(".restartbtn").on("click",function(){
+            startOver();
+            $("#level-title").text("Level "+level);
+            nextSequence();
+            $(".restartbtn").hide();
+        });
     }
 }
 function nextSequence(){
