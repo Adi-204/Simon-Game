@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     #level-title {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       margin-top: 70px;
     }
     .container{
@@ -16,7 +16,7 @@
   }
   @media (max-width: 480px) {
     #level-title {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       margin-top: 70px;
     }
     .container{
@@ -31,7 +31,7 @@
     .startbtn,
     .restartbtn {
       padding: 8px 14px;
-      font-size: 24px;
+      font-size: 15px;
       margin: 5px;
     }
 }
